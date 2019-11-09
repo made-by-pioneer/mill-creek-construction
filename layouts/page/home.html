@@ -1,0 +1,173 @@
+{{ define "main" }}
+
+<style>
+.title-back {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235a5c61' fill-opacity='0.8' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.services-img {
+    background-image: url("/pageimg/construction-in-statesboro1.jpg");
+}
+
+.text-shadow {
+  text-shadow: 2px 2px #222;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  max-width: 800px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+</style>
+
+<div class="bg-cover bg-top bg-no-repeat px-24 hero">
+  <div class="py-24"></div>
+  <div class="py-3"></div>
+  <h1 class="font-big text-7xl text-center font-black text-white leading-tight">A comprehensive site work package for a variety of projects.</h1>
+  <a href="#services" class="flex flex-wrap pt-12 rounded scroll">
+    <span class="w-auto bg-white font-work text-xl font-bold mx-auto pl-4 uppercase">Our Services<i class="bg-gray-300 p-5 ml-4 fas fa-chevron-right"></i></span>
+  </a>
+  <div class="py-20"></div>
+</div>
+
+<section id="about" class="flex flex-wrap py-20">
+  <div class="w-7/12 mx-auto text-center">
+    <div class="w-full mx-auto">
+        <div class="py-5 title-back">
+            <h1 class="font-big text-6xl text-center font-black text-white leading-tight uppercase text-shadow">About the Company</h1>
+        </div>
+    </div>
+    <div class="w-full">
+      <p class="font-work text-xl font-thin pt-8 pb-24">Mill Creek Construction provides the Southeast United States a comprehensive site work package for a variety of projects. From estimating to field operations, surveying to general contractors, Mill Creek Construction aims to meet the needs of all customers. We are committed to your satisfaction and job quality.</p>
+    </div>
+  </div>
+  <div class="w-11/12 h-56 mx-auto">
+    <img src="/pageimg/construction-in-statesboro1.jpg">
+  </div>
+</section>
+
+<section id="services" class="flex flex-wrap">
+    <div class="w-2/3 mx-auto">
+        <div class="py-5 bg-white shadow-lg title-back">
+            <h2 class="font-big text-6xl text-center font-black text-white leading-tight uppercase text-shadow">Services</h2>
+        </div>
+    </div>
+    <div class="w-full bg-gray-300 py-1"></div>
+    <div class="flex flex-wrap w-full bg-white font-work text-2xl font-thin text-center py-16">
+      <div class="flex flex-wrap w-5/6 mx-auto">
+        <ul class="w-1/3 p-8 border-r-2">
+        {{ range first 4 (where .Site.Pages "Type" "services") }}
+            <li>{{ .Title }}</li>
+        {{ end }}
+        </ul>
+        <ul class="w-1/3 p-8 border-r-2">
+          {{ range first 4 (after 4 (where .Site.Pages "Type" "services") ) }}
+              <li>{{ .Title }}</li>
+          {{ end }}
+        </ul>
+        <ul class="w-1/3 p-8 border-r-2">
+          {{ range first 4 (after 8 (where .Site.Pages "Type" "services") ) }}
+              <li>{{ .Title }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="w-11/12 h-56 mx-auto">
+      <img src="/pageimg/construction-in-statesboro1.jpg">
+    </div>
+</section>
+
+<section class="flex flex-wrap">
+    <div class="w-2/3 mx-auto">
+        <div class="py-5 bg-white shadow-lg title-back">
+            <h2 class="font-big text-6xl text-center font-black text-white leading-tight uppercase text-shadow">Certifications</h2>
+        </div>
+    </div>
+    {{ range first 3 (where .Site.Pages "Type" "pics_of_work") }}
+    <div data-micromodal-trigger="{{ .File.Path | base64Encode }}" class="w-1/2 border-t-4 border-l-4 border-white hover:border-color-266730">
+        <img src="{{ .Params.work_img }}">
+    </div>
+    <div class="modal micromodal-slide" id="{{ .File.Path | base64Encode }}" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <img src="{{ .Params.work_img }}">
+        </div>
+      </div>
+    </div>
+    {{ end }}
+</section>
+
+<div class="py-80"></div>
+<div class="py-80"></div>
+<div class="py-80"></div>
+<div id="bottom" class="py-80"></div>
+<h1>hey this is the bottom</h1>
+{{ end }}
