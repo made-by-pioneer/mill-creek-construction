@@ -52,7 +52,7 @@
         {{ partial "utilities/dropdownClickScript.html" (dict "context" . "Name" $dropdownName) }}
         {{ end }}
   {{ else }}
-  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}{{ if .Pre }}scroll{{ else }}{{ end }} text-lg font-thin text-gray-600 pr-8 select-none desktop-menu-item" href="{{.URL}}">{{ .Name }}</a>
+  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}{{ if .Pre }}scroll{{ else }}{{ end }} text-base font-thin text-color-585a5e pr-8 select-none uppercase desktop-menu-item" href="{{.URL}}">{{ .Name }}</a>
   {{ end }}{{ end }}
 </div>
 
