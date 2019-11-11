@@ -10,38 +10,32 @@ description = "This domain is established to be used for illustrative examples i
 [[menu.desktop]]
     identifier = "whatweDo"
     name = "What we do"
-    url = "/page-1/"
+    url = "/services/"
     weight = 1
 [[menu.desktop]]
     identifier = "certifications"
     name = "Certifications"
-    url = "/page-1/"
+    url = "/certifications/"
     weight = 2
 [[menu.desktop]]
     identifier = "contactUs"
     name = "Contact"
-    url = "/page-1/"
+    url = "/contact/"
     weight = 3
 [[menu.mobile]]
-    identifier = "menu-mobile-1"
-    name = "Menu Item 1"
-    url = "/page-1"
+    identifier = "whatweDo"
+    name = "What we do"
+    url = "/services/"
     weight = 1
-        [[menu.mobile]]
-            identifier = "menu-child-1"
-            name = "Menu Child 1"
-            url = "/page-11/"
-            weight = 1
-            parent = "menu-mobile-1"
 [[menu.mobile]]
-    identifier = "menu-mobile-2"
-    name = "Menu Item 2"
-    url = "/page-2"
+    identifier = "certifications"
+    name = "Certifications"
+    url = "/certifications/"
     weight = 2
 [[menu.mobile]]
-    identifier = "menu-mobile-3"
-    name = "Menu Item 3"
-    url = "/page-3"
+    identifier = "contactUs"
+    name = "Contact"
+    url = "/contact/"
     weight = 3
 [params.contact_numbers]
     Fax = "555.555.5555"
@@ -49,7 +43,7 @@ description = "This domain is established to be used for illustrative examples i
 [params.Logos]
     color_logo = "/pageimg/branding/MCC.FullMark.Color.svg"
     logo = "/pageimg/branding/MCC.FullMark.White.svg"
-    mobile_logo = "/pageimg/example-logo.png"
+    mobile_logo = "/pageimg/branding/MCC.FullMark.White.svg"
 [params.utility_images]
     thank_you_background = "/pageimg/thank-you-contact.jpg"
 [params.address]

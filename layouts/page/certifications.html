@@ -1,0 +1,89 @@
+{{ define "main" }}
+
+<style>
+.title-back {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235a5c61' fill-opacity='0.8' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.services-img {
+    background-image: url("/pageimg/construction-in-statesboro1.jpg");
+}
+.services-image-background {
+  background-image: url("/pageimg/construction-in-statesboro1.jpg");
+}
+.certifications-image-background {
+  background-image: url("/pageimg/certifications.jpg");
+}
+
+.text-shadow {
+  text-shadow: 2px 2px #222;
+}
+a {
+  transition: .2s;
+}
+</style>
+
+<section id="about" class="flex flex-wrap">
+    <div class="w-full mx-auto bg-cover bg-bottom bg-no-repeat certifications-image-background">
+        <div class="py-32 sm:py-56"></div>
+    </div>
+</section>
+
+<section class="flex flex-wrap -mt-56">
+    <div class="w-2/3 mx-auto">
+        <div class="py-5 bg-white shadow-lg title-back">
+            <h2 class="font-big text-3xl md:text-4xl lg:text-6xl text-center font-black text-white leading-tight uppercase text-shadow">Certifications</h2>
+        </div>
+    </div>
+    <div class="flex flex-wrap w-full bg-white font-work text-2xl font-thin text-center pt-16">
+      <div class="flex flex-wrap w-5/6 mx-auto">
+        <ul class="flex flex-wrap w-full">
+        {{ range (where .Site.Pages "Type" "certifications") }}
+          <div class="w-5/6 md:w-1/3 mx-auto pb-12">
+            <img class="w-24 mx-auto" src="{{ .Params.award_img }}">
+          </div>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="py-72 b-white"></div>
+</section>
+
+<section class="flex flex-wrap pb-24 lg:-mt-32">
+    <h2 class="w-full font-big text-3xl md:text-4xl text-center font-black leading-tight uppercase pb-12">Ask About a Service</h2>
+    <form class="flex flex-wrap w-5/6 mx-auto" action="/thank-you/" netlify-honeypot="field-for-coolguys" name="" method="POST" netlify>
+        <input type="hidden" name="subject" value="New Submission from Website" />
+        <div class="flex flex-wrap w-full md:w-1/3 pb-4">
+            <label class="w-full font-work text-lg">Full Name*</label>
+            <input name="full-name" type="text" placeholder="Your name" class="w-11/12 font-work text-sm border-4 mr-auto p-2" required>
+        </div>
+        <div class="flex flex-wrap w-full md:w-1/3 pb-4">
+            <label class="w-full font-work text-lg">Email*</label>
+            <input name="email" type="email" placeholder="Your email" class="w-11/12 font-work text-sm border-4 mr-auto p-2" required>
+        </div>
+        <div class="flex flex-wrap w-full md:w-1/3 pb-4">
+            <label class="w-full font-work text-lg">Phone Number*</label>
+            <input name="phone" type="tel" placeholder="Your phone number" class="w-11/12 font-work text-sm border-4 mr-auto p-2" required>
+        </div>
+        <div class="flex flex-wrap w-full pt-3 md:pt-5">
+            <label class="w-full font-work text-lg">Service Needed*</label>
+            <select class="w-full font-work text-base border-4 mr-6 p-2">
+                {{ range (where .Site.Pages "Type" "services" )}}
+                <option value="{{ .Title }}">{{ .Title }}</option>
+                {{ end }}
+            </select>
+        </div>
+        <div class="flex flex-wrap w-full py-5">
+            <label class="w-full font-work text-lg">About your project</label>
+            <textarea name="email" type="email" placeholder="Tell us more about your project." class="w-full h-32 font-work text-sm border-4 mr-6 p-2"></textarea>
+        </div>
+        <input type="text" name="field-for-coolguys" style="display:none" />
+        <!-- <a href="/services/" class="flex flex-wrap w-full pt-12 rounded">
+          <span class="w-auto bg-white font-work text-sm md:text-xl font-bold mx-auto pl-4 uppercase shadow-lg hover:bg-gray-300">Learn More<i class="bg-gray-300 p-4 lg:p-5 ml-4 fas fa-chevron-right"></i></span>
+        </a> -->
+        <div class="">
+            <input type="submit" value="Submit" class="bg-grey-300 font-work text-sm md:text-lg font-bold mx-auto p-3 uppercase shadow-lg hover:bg-gray-300 hover:cursor-pointer">
+        </div>
+    </form>
+</section>
+{{ end }}

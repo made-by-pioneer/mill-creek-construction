@@ -2,8 +2,24 @@
   
 </style>
 
-<footer class="flex flex-wrap pt-5 pb-5">
-  
+<footer class="flex flex-wrap items-center bg-color-266730 py-12 lg:py-3 px-8 lg:px-16">
+  <div class="w-full lg:w-1/5 mx-auto pb-12 lg:pb-0 text-center lg:text-left">
+    <img class="w-64 lg:w-48 mx-auto lg:mx-0 lg:mr-auto pb-1" src="{{ .Site.Params.logos.logo }}">
+    <p class="font-work text-xs font-thin text-white leading-relaxed tracking-wider opacity-50">Copyright {{ now.Format "2006"}} {{ .Site.Title }}</p>
+  </div>
+  <div class="w-full lg:w-4/5 font-muli text-sm font-thin text-white text-center lg:text-left lg:text-right lg:pl-5">
+    <a href="/services/">
+      Services
+    </a>
+    <span class="px-3 opacity-25">/</span>
+    <a href="/certifications/">
+      Certifications 
+    </a>
+    <span class="px-3 opacity-25">/</span>
+    <a href="/contact/">
+      Contact
+    </a>
+  </div>
 </footer>
 
 {{ if eq .Site.Params.extra_tools.elevatorJS true }}
