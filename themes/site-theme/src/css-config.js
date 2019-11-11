@@ -7,6 +7,9 @@ module.exports = {
 
       'color-266730': '#266730',
       'color-5a5c61': '#5a5c61',
+      'color-345e37': '#345e37',
+      'color-2b4e2d': '#2b4e2d',
+      'color-20b64f': '#20b64f',
       'blk-overlay': 'rgba(34,34,34,0.3)',
       transparent: 'transparent',
 
@@ -14,6 +17,7 @@ module.exports = {
       white: '#fff',
 
       gray: {
+        'noblue': 'rgb(240, 240, 240)',
         100: '#f7fafc',
         200: '#edf2f7',
         300: '#e2e8f0',
@@ -58,12 +62,11 @@ module.exports = {
       xxl: '1440px',
     },
     fontFamily: {
-      'big': [
-        'Big Shoulders Display',
-        'cursive',
+      'euro': [
+        'eurostile',
       ],
       'work': [
-        'Work Sans',
+        'work-sans',
         'sans-serif',
       ],
     },
