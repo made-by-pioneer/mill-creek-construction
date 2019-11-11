@@ -1,11 +1,11 @@
-baseURL = "https://gz-default.netlify.com/"
+baseURL = "https://mill-creek-construction.netlify.com/"
 languageCode = "en-us"
 theme = "site-theme"
-title = "Example"
+title = "Mill Creek Construction"
 enableRobotsTXT = true
 
 [params.meta]
-description = "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission."
+description = "Mill Creek Construction provides the Southeast United States a comprehensive site work package for a variety of projects. From estimating to field operations, surveying to general contractors, Mill Creek Construction aims to meet the needs of all customers. We are committed to your satisfaction and job quality."
 
 [[menu.desktop]]
     identifier = "whatweDo"
