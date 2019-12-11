@@ -17,3 +17,5 @@ fields:
   name: weight
   label: weight
   hidden: true
+pages:
+- content/certifications/3.md
