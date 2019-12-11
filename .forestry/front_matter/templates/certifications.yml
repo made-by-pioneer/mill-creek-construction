@@ -4,13 +4,16 @@ hide_body: true
 fields:
 - type: file
   name: award_img
-  label: award_img
+  label: Award Image
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The name of the certification.
 - type: text
   name: text
   label: text
+  description: Description of the certification.
 - type: number
   name: weight
   label: weight
+  hidden: true
