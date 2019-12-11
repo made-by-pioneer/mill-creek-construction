@@ -14,7 +14,6 @@ sections:
   label: Services
   create: all
   match: "**/*"
-  exclude: _index.md
   templates:
   - services
 - type: directory
@@ -22,7 +21,6 @@ sections:
   label: Certifications
   create: all
   match: "**/*"
-  exclude: _index.md
   templates:
   - certifications
 - type: directory
