@@ -15,6 +15,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - service-page
   - services
 - type: directory
   path: content/certifications
