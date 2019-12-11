@@ -6,3 +6,5 @@ fields:
   name: title
   label: Title
   description: The name of the service.
+pages:
+- content/services/Asphalt Paving.md
