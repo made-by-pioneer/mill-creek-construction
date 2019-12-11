@@ -1,0 +1,16 @@
+---
+label: Certifications
+hide_body: true
+fields:
+- type: file
+  name: award_img
+  label: award_img
+- type: text
+  name: title
+  label: title
+- type: text
+  name: text
+  label: text
+- type: number
+  name: weight
+  label: weight
