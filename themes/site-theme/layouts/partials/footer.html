@@ -8,17 +8,13 @@
     <p class="font-work text-xs font-thin text-white leading-tight tracking-wider opacity-50">Copyright {{ now.Format "2006"}} {{ .Site.Title }}</p>
   </div>
   <div class="w-full lg:w-4/5 font-euro text-sm font-thin text-white text-center lg:text-left lg:text-right lg:pl-5">
-    <a href="/services/">
-      Services
+    {{ $currentNode := . }}
+    {{ range .Site.Menus.footer }}
+    <a href="{{.URL}}">
+      {{ .Name }}
     </a>
     <span class="px-3 opacity-25">/</span>
-    <a href="/certifications/">
-      Certifications 
-    </a>
-    <span class="px-3 opacity-25">/</span>
-    <a href="/contact/">
-      Contact
-    </a>
+    {{ end }}
   </div>
 </footer>
 

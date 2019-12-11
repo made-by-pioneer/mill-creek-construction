@@ -5,32 +5,47 @@ title = "Mill Creek Construction"
 enableRobotsTXT = true
 
 [[menu.desktop]]
-    identifier = "whatweDo"
+    identifier = "What we do"
     name = "What we do"
     url = "/services/"
     weight = 1
 [[menu.desktop]]
-    identifier = "certifications"
+    identifier = "Certifications"
     name = "Certifications"
     url = "/certifications/"
     weight = 2
 [[menu.desktop]]
-    identifier = "contactUs"
+    identifier = "Contact"
     name = "Contact"
     url = "/contact/"
     weight = 3
 [[menu.mobile]]
-    identifier = "whatweDo"
+    identifier = "What we do"
     name = "What we do"
     url = "/services/"
     weight = 1
 [[menu.mobile]]
-    identifier = "certifications"
+    identifier = "Certifications"
     name = "Certifications"
     url = "/certifications/"
     weight = 2
 [[menu.mobile]]
-    identifier = "contactUs"
+    identifier = "Contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+[[menu.footer]]
+    identifier = "What we do"
+    name = "What we do"
+    url = "/services/"
+    weight = 1
+[[menu.footer]]
+    identifier = "Certifications"
+    name = "Certifications"
+    url = "/certifications/"
+    weight = 2
+[[menu.footer]]
+    identifier = "Contact"
     name = "Contact"
     url = "/contact/"
     weight = 3

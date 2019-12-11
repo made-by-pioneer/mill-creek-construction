@@ -5,21 +5,17 @@
     background-color: #116b00;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2320b64f' fill-opacity='0.8' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
-.services-img {
-    background-image: url("/pageimg/construction-in-statesboro1.jpg");
-}
-.services-image-background {
-  background-image: url("/pageimg/construction-in-statesboro1.jpg");
-}
-.certifications-image-background {
-  background-image: url("/pageimg/certifications.jpg");
-}
-
 .text-shadow {
   text-shadow: 2px 2px #222;
 }
 a {
   transition: .2s;
+}
+</style>
+
+<style>
+.certifications-image-background {
+  background-image: url("{{ .Site.Params.tracking.cloudinary_url }}{{ .Page.Params.hero_section.image }}");
 }
 </style>
 
@@ -32,7 +28,7 @@ a {
 <section class="flex flex-wrap -mt-56">
     <div class="w-2/3 mx-auto">
         <div class="py-5 title-back">
-            <h2 class="font-euro text-3xl md:text-4xl lg:text-6xl text-center font-black text-white leading-tight uppercase text-shadow">Certifications</h2>
+            <h2 class="font-euro text-3xl md:text-4xl lg:text-6xl text-center font-black text-white leading-tight uppercase text-shadow">{{ .Page.Params.hero_section.title }}</h2>
         </div>
     </div>
     <div class="flex flex-wrap w-full bg-white font-work text-2xl font-thin text-center pt-16">
@@ -52,7 +48,7 @@ a {
 </section>
 
 <section class="flex flex-wrap pb-24 lg:-mt-32">
-    <h2 class="w-full font-euro text-3xl md:text-4xl text-center font-black leading-tight uppercase pb-12">Ask About a Service</h2>
+    <h2 class="w-full font-euro text-3xl md:text-4xl text-center font-black leading-tight uppercase pb-12">{{ .Page.Params.form_section.title }}</h2>
     <form class="flex flex-wrap w-5/6 mx-auto" action="/thank-you/" netlify-honeypot="field-for-coolguys" name="" method="POST" netlify>
         <input type="hidden" name="subject" value="New Submission from Website" />
         <div class="flex flex-wrap w-full md:w-1/3 pb-4">
