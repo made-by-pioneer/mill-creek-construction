@@ -3,11 +3,10 @@
   transition: .2s;
 }
 .hero {
-  background-image: url("/pageimg/construction-in-statesboro3.jpg")
+  background-image: url("{{ .Site.Params.tracking.cloudinary_url }}{{ .Page.Params.hero_section.image }}")
 }
 .hero h1 {
   text-shadow: 2px 2px #222;
-  font-family: 'Big Shoulders Display', cursive;
 }
 </style>
 
@@ -21,7 +20,7 @@
 <section id="header-that-sticks">
   <div class="flex flex-wrap items-center bg-gray-noblue select-none py-3 lg:py-2 lg:pl-24 px-5 lg:px-16 header-box">
     <a id="logo" class="w-1/3 md:w-1/4 lg:mx-auto lg:p-2" href="/">
-      <img class="w-72 mx-auto" src="{{ .Site.Params.logos.color_logo }}">
+      <img class="w-72 mx-auto" src="{{ .Site.Data.global_data.logos.color_logo }}">
     </a>
     {{ partial "siteNavi.html" . }}
   </div>
@@ -30,7 +29,7 @@
 <div class="bg-black h-screen overflow-scroll mobile-menu">
   <div class="py-2 px-5 flex flex-wrap items-center">
     <a id="logo" class="flex flex-wrap items-center w-1/3 md:w-1/4 mr-auto no-underline" href="/">
-      <img class="w-72" src="{{ .Site.Params.Logos.mobile_logo }}">
+      <img class="w-72" src="{{ .Site.Data.global_data.Logos.mobile_logo }}">
     </a>
     <i class="w-1/3 md:w-2/3 text-3xl text-white text-right fas fa-times close-menu"></i>
   </div>

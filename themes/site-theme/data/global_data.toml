@@ -1,0 +1,17 @@
+[address]
+city = "Statesboro"
+state = "GA"
+street = "1576 Maria Sorrell Road"
+zip = 30461
+[contact_numbers]
+phone = "555-555-5555"
+[email]
+email = "example@example.com"
+[logos]
+color_logo = "https://res.cloudinary.com/pioneer-design/image/upload/v1576079917/Mill%20Creek%20Construction/MCC.FullMark.Color_zq9h1d.svg"
+logo = "https://res.cloudinary.com/pioneer-design/image/upload/v1576079917/Mill%20Creek%20Construction/MCC.FullMark.White_oqjkxg.svg"
+mobile_logo = "https://res.cloudinary.com/pioneer-design/image/upload/v1576079917/Mill%20Creek%20Construction/MCC.FullMark.White_oqjkxg.svg"
+[meta]
+description = "Mill Creek Construction provides the Southeast United States a comprehensive site work package for a variety of projects. From estimating to field operations, surveying to general contractors, Mill Creek Construction aims to meet the needs of all customers. We are committed to your satisfaction and job quality."
+[tracking]
+google_analytics = "UA-121813241-14"

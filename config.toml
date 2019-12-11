@@ -4,9 +4,6 @@ theme = "site-theme"
 title = "Mill Creek Construction"
 enableRobotsTXT = true
 
-[params.meta]
-description = "Mill Creek Construction provides the Southeast United States a comprehensive site work package for a variety of projects. From estimating to field operations, surveying to general contractors, Mill Creek Construction aims to meet the needs of all customers. We are committed to your satisfaction and job quality."
-
 [[menu.desktop]]
     identifier = "whatweDo"
     name = "What we do"
@@ -37,25 +34,8 @@ description = "Mill Creek Construction provides the Southeast United States a co
     name = "Contact"
     url = "/contact/"
     weight = 3
-[params.contact_numbers]
-    Fax = "555.555.5555"
-    Phone = "555.555.5555"
-[params.Logos]
-    color_logo = "/pageimg/branding/MCC.FullMark.Color.svg"
-    logo = "/pageimg/branding/MCC.FullMark.White.svg"
-    mobile_logo = "/pageimg/branding/MCC.FullMark.White.svg"
-[params.utility_images]
-    thank_you_background = "/pageimg/thank-you-contact.jpg"
-[params.address]
-    city = "Statesboro"
-    state = "GA"
-    street = "P.O. Box 134"
-    zip = 30459
-[params.email]
-    email = "example@example.com"
 [params.tracking]
-    google_analytics = ""
-    cloudinaryUrl = ""
+    cloudinary_url = "https://res.cloudinary.com/pioneer-design/image/upload"
 [params.social_links]
     facebook = ""
     insta = ""
