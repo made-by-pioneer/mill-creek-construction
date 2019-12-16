@@ -1,0 +1,61 @@
+---
+label: Site Data
+hide_body: true
+fields:
+- type: field_group
+  name: address
+  label: address
+  fields:
+  - type: text
+    name: city
+    label: city
+  - type: text
+    name: state
+    label: state
+  - type: text
+    name: street
+    label: street
+  - type: number
+    name: zip
+    label: zip
+- type: field_group
+  name: contact_numbers
+  label: contact_numbers
+  fields:
+  - type: text
+    name: phone
+    label: phone
+- type: field_group
+  name: email
+  label: email
+  fields:
+  - type: text
+    name: email
+    label: email
+- type: field_group
+  name: logos
+  label: logos
+  fields:
+  - type: file
+    name: color_logo
+    label: color_logo
+  - type: file
+    name: logo
+    label: logo
+  - type: file
+    name: mobile_logo
+    label: mobile_logo
+- type: field_group
+  name: meta
+  label: meta
+  fields:
+  - type: textarea
+    name: description
+    label: description
+- type: field_group
+  name: tracking
+  label: tracking
+  fields:
+  - type: text
+    name: google_analytics
+    label: google_analytics
