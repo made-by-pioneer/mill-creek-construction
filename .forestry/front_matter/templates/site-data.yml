@@ -20,7 +20,7 @@ fields:
     label: zip
 - type: field_group
   name: contact_numbers
-  label: contact_numbers
+  label: Contact Numbers
   fields:
   - type: text
     name: phone
@@ -38,13 +38,13 @@ fields:
   fields:
   - type: file
     name: color_logo
-    label: color_logo
+    label: Color Logo
   - type: file
     name: logo
     label: logo
   - type: file
     name: mobile_logo
-    label: mobile_logo
+    label: Mobile Logo
 - type: field_group
   name: meta
   label: meta
@@ -58,4 +58,4 @@ fields:
   fields:
   - type: text
     name: google_analytics
-    label: google_analytics
+    label: Google Analytics
