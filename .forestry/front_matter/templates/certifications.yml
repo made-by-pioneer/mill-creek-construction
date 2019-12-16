@@ -18,6 +18,6 @@ fields:
   label: weight
   hidden: true
 pages:
+- content/certifications/1.md
 - content/certifications/2.md
 - content/certifications/3.md
-- content/certifications/1.md

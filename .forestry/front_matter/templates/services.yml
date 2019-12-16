@@ -7,14 +7,14 @@ fields:
   label: Title
   description: The name of the service.
 pages:
-- content/services/Flatwork.md
-- content/services/Seal Coating.md
-- content/services/Site Work.md
 - content/services/Asphalt Paving.md
 - content/services/Curb & Gutter.md
 - content/services/Erosion Control.md
-- content/services/Land Clearing.md
-- content/services/Striping.md
-- content/services/Utility installation.md
+- content/services/Flatwork.md
 - content/services/General Contractor.md
+- content/services/Land Clearing.md
+- content/services/Seal Coating.md
+- content/services/Site Work.md
+- content/services/Striping.md
 - content/services/Surveying.md
+- content/services/Utility installation.md
