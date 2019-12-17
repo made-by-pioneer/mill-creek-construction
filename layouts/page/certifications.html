@@ -65,7 +65,7 @@ a {
         </div>
         <div class="flex flex-wrap w-full pt-3 md:pt-5">
             <label class="w-full font-work text-lg">Service Needed*</label>
-            <select class="w-full bg-white font-work text-base border-4 hover:border-color-345e37 focus:border-color-345e37 mr-6 p-2">
+            <select class="w-full bg-white font-work text-base border-4 hover:border-color-345e37 focus:border-color-345e37 mr-6 p-2" name="service-needed">
                 {{ range (where .Site.Pages "Type" "services" )}}
                 <option value="{{ .Title }}">{{ .Title }}</option>
                 {{ end }}
@@ -73,7 +73,7 @@ a {
         </div>
         <div class="flex flex-wrap w-full py-5">
             <label class="w-full font-work text-lg">About your project</label>
-            <textarea name="email" type="email" placeholder="Tell us more about your project." class="w-full h-32 font-work text-sm border-4 hover:border-color-345e37 focus:border-color-345e37 mr-6 p-2"></textarea>
+            <textarea name="message" placeholder="Tell us more about your project." class="w-full h-32 font-work text-sm border-4 hover:border-color-345e37 focus:border-color-345e37 mr-6 p-2"></textarea>
         </div>
         <input type="text" name="field-for-coolguys" style="display:none" />
         <!-- <a href="/services/" class="flex flex-wrap w-full pt-12 rounded">
