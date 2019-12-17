@@ -1,12 +1,13 @@
 {{ define "main" }}
-<style>#thank-you{background-image:url("{{ .Site.Params.utility_images.thank_you_background }}");background-size:auto;background-repeat:no-repeat;}</style>
 
-<section id="thank-you" class="flex h-screen">
-  <div class="flex w-full bg-blk-overlay text-center">
-  <div class="w-5/6 mx-auto text-white pt-32">
-    <h1 class="text-2xl lg:text-4xl pb-4"><span class="bg-black p-1 italic">Thank you!</span> your submission has been received.</h1>
-    <h2 class="text-lg lg:text-2xl font-thin pb-6">We will be in touch shortly.</h2>
-    <a href="/" class="bg-black text-base lg:text-xl text-white rounded-lg py-2 px-4 uppercase no-underline">Return to Home Page</a>
+<section id="thank-you" class="flex font-euro pb-56">
+  <div class="flex w-full bg-white text-center">
+  <div class="w-5/6 mx-auto text-black pt-32">
+    <h1 class="text-2xl lg:text-4xl pb-4"><span class="bg-color-345e37 text-white p-1 italic">Thank you!</span> your submission has been received.</h1>
+    <h2 class="font-euro text-lg lg:text-2xl font-thin pb-6">We will be in touch shortly.</h2>
+    <a href="/" class="flex flex-wrap pt-5 rounded">
+      <span class="w-auto bg-color-345e37 font-work text-sm md:text-xl text-white font-bold mx-auto pl-4 uppercase shadow-lg hover:bg-color-2b4e2d">Return to Home Page<i class="bg-color-20b64f p-4 lg:p-5 ml-4 fas fa-chevron-right"></i></span>
+    </a>
   </div>
   </div>
 </section>
